@@ -1,0 +1,171 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* background-color: #bae1ff; */
+  /* background-color: rgb(170, 170, 170); */
+  background-color: rgba(63, 62, 62, 0.798);
+}
+
+#home-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 70%;
+  max-width: 580px;
+  min-width: 500px;
+  /* background-color: #abebb8; */
+  background-color: black;
+  /* border: 5px solid white;  */
+  color: white;
+  border-radius: 0.5rem;
+}
+
+#home-screen h1 {
+  border: 1px solid black;
+  padding: 10px; 
+  background-color: black;
+  color: rgb(238, 238, 51);
+}
+
+img{
+  width: 30px;
+  height: 30px;
+}
+
+#start-game {
+  /* font-size: 30px; */
+  background-color: rgba(63, 62, 62, 0.798);
+  color: rgb(170, 170, 170);
+  padding: 10px;
+  border: 2px solid rgb(170, 170, 170);
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+#start-game:hover {
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+#score-container {
+  height: 70%;
+  width: 10%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#grid {
+  
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 70%;
+  max-width: 580px;
+  min-width: 500px;
+  background-color: black;
+}
+
+#grid div {
+  height: 5.56%;
+  width: 5.3%;
+  background-color: black;
+  /* border-radius: 50%; */
+}
+
+#grid .seed {
+  background: radial-gradient(rgb(255, 251, 56) 0%, transparent 20%, transparent 40%);
+}
+
+#grid .blinky {
+  /* background-color: red; */
+  background-image: url('../images/blinky.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#grid .pinky {
+  background-image: url('../images/pinky.png');
+  z-index: 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding : 1px; */
+}
+
+#grid .wrinkly {
+  background-image: url('../images/wrinkly.png');
+  /* background-color: turquoise; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#grid .clyde {
+  background-image: url('../images/clyde.png');
+  /* background-color: orange; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#grid .pacman {
+  background-image: url('../images/pacman.png');
+  /* background-color: yellow; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#grid .route {
+  background-color: yellowgreen;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#grid .wall {
+  background-color: rgb(3, 7, 255);
+  border-radius: 0.01rem;
+}
+
+#grid .flee {
+  background-color: darkblue;
+}
+
+#grid .biscuit {
+  background-image: url('../images/scared-ghost.png');
+  /* background-color: grey; */
+  border-radius: 50%;
+  animation: blinker 1s linear infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#game-over {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 70%;
+  max-width: 580px;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+#final-score {
+  background-color: black;
+  color: rgb(238, 238, 51);
+  font-size: xx-large;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
